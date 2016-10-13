@@ -17,9 +17,8 @@ const styles = StyleSheet.create({
     elevation: 2,
     paddingTop: 25,
     position: 'relative',
-    shadowColor: '#000',
-    shadowOpacity: 0.2,
-    shadowOffset: { width: 0, height: 2 }
+    borderBottomWidth: 2,
+    borderBottomColor: '#7f8c8d'
   },
   textStyles: {
     fontSize: 24,
