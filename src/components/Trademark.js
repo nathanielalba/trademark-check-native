@@ -14,13 +14,24 @@ class Trademark extends Component {
 
   renderTrademark() {
     const { searchResults } = this.props;
-    console.log(searchResults);
 
     if (searchResults.data.length === 9) {
       return (
         <View>
-          <Text>Nothing was found!!</Text>
-          <Text>It's all yours</Text>
+          <View style={styles.borderBottom}>
+            <Text
+              style={[styles.buttonTextStyles, styles.nothingFoundStyles]}
+            >
+              Nothing was found!!
+            </Text>
+          </View>
+          <Text style={styles.centeringStyles}>It's all yours</Text>
+          <TouchableOpacity
+            onPress={() => this.props.navigator.push({ title: 'splashPage' })}
+            style={styles.buttonStyles}
+          >
+            <Text style={styles.buttonTextStyles}>SEARCH AGAIN</Text>
+          </TouchableOpacity>
         </View>
       );
     } else if (searchResults.isLoading) {
@@ -35,8 +46,10 @@ class Trademark extends Component {
     }
     return (
     <View>
-      <Text>Sorry</Text>
-      <Text>Something was found..</Text>
+      <View style={styles.borderBottom}>
+        <Text style={[styles.buttonTextStyles, styles.foundHeaderStyles]}>Sorry...</Text>
+        <Text style={{ paddingBottom: 8 }}>Something was found..</Text>
+      </View>
       <TrademarkDescription trademark={searchResults.data} />
       <TouchableOpacity
         onPress={() => this.props.navigator.push({ title: 'splashPage' })}
@@ -58,6 +71,17 @@ class Trademark extends Component {
 }
 
 const styles = StyleSheet.create({
+  foundHeaderStyles: {
+    paddingBottom: 8,
+  },
+  borderBottom: {
+    borderBottomWidth: 1,
+    borderBottomColor: '#000',
+    marginBottom: 20
+  },
+  nothingFoundStyles: {
+    marginBottom: 20,
+  },
   buttonStyles: {
     marginTop: 50,
     borderWidth: 2,

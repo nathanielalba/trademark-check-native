@@ -35,7 +35,7 @@ export function fetchData(searchTerm) {
     dispatch(getSearchText());
 		return axios.get(API_URL)
           .then(resp => {
-            dispatch(setSearchResults(resp.data.trademarks));
+            dispatch(setSearchResults(resp.data.trademarks[0]));
           })
           .catch(err => console.log(err))
           .done();

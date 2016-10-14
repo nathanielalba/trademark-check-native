@@ -1,5 +1,5 @@
 const defaultState = {
-  data: [],
+  data: {},
   isLoading: false
 };
 
@@ -12,7 +12,7 @@ export default (state = defaultState, action) => {
       };
     case 'set_search_results':
       return {
-        data: [...action.payload],
+        data: { ...action.payload },
         isLoading: false
       };
     default:
