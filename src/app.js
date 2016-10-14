@@ -6,12 +6,13 @@ import configStore from './store/createStore';
 // import Header from './components/Header';
 import BusinessBody from './components/Body';
 import About from './components/About';
+import Trademark from './components/Trademark';
 
 export default class BusinessDemo extends Component {
   render() {
     const routes = [
       { title: 'splashPage' },
-      { title: 'trademarkCheck' },
+      { title: 'trademark' },
       { title: 'about' },
     ];
 
@@ -19,12 +20,9 @@ export default class BusinessDemo extends Component {
       switch (route.title) {
         case 'splashPage':
           return (<BusinessBody navigator={navigator} />);
-        case 'trademarkCheck':
-          return (
-            <View>
-              <Text>Coming Soon</Text>
-            </View>
-          );
+          // return (<Trademark navigator={navigator} />);
+        case 'trademark':
+          return (<Trademark navigator={navigator} />);
         case 'about':
           return (<About navigator={navigator} />);
         default:

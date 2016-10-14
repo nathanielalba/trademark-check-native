@@ -10,9 +10,9 @@ const createAppStore = compose(
 export default () => {
   const store = createAppStore(rootReducer);
 
-  store.subscribe(() => {
-    console.log(store.getState());
-  });
+  // store.subscribe(() => {
+  //   console.log(store.getState());
+  // });
 
   return store;
 };

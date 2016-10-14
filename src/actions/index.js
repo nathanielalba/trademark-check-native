@@ -32,7 +32,7 @@ export const setSearchResults = (payload) => {
 export function fetchData(searchTerm) {
   const API_URL = `http://www.markerapi.com/api/v1/trademark/search/${searchTerm}/username/${API_USER}/password/${API_PASS}`;
 	return (dispatch) => {
-    // dispatch(getSearchText());
+    dispatch(getSearchText());
 		return axios.get(API_URL)
           .then(resp => {
             dispatch(setSearchResults(resp.data.trademarks));

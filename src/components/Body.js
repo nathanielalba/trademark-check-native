@@ -20,12 +20,12 @@ class BusinessBody extends Component {
   }
 
   render() {
-    const { setSearchText, fetchData, searchText } = this.props;
+    const { setSearchText, fetchData, searchText, navigator } = this.props;
 
     return (
       <View style={styles.bodyStyles}>
         <Input setSearchText={setSearchText} />
-        <Button fetchData={fetchData} searchText={searchText} />
+        <Button fetchData={fetchData} searchText={searchText} navigator={navigator} />
         <TouchableOpacity onPress={this.buttonPress} style={styles.aboutStyles}>
           <Text style={styles.aboutTextStyles}>ABOUT</Text>
         </TouchableOpacity>

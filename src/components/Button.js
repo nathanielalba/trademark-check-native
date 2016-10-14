@@ -6,6 +6,7 @@ const Button = (props) => {
   const searchTerms = () => {
     const { fetchData, searchText } = props;
     fetchData(searchText);
+    props.navigator.push({ title: 'trademark' });
   };
 
   return (
