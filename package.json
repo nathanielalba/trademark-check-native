@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "build:ios": "node node_modules/react-native/local-cli/cli.js bundle --entry-file='index.ios.js' --bundle-output='./ios/BusinessDemo/main.jsbundle' --dev=false --platform='ios' --assets-dest='./ios'",
+    "build:android": "node node_modules/react-native/local-cli/cli.js bundle --entry-file='index.android.js' --bundle-output='./android/main.jsbundle' --dev=false --platform='android' --assets-dest='./android'"
   },
   "dependencies": {
     "axios": "^0.15.0",
