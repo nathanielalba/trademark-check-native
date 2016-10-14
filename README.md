@@ -1,16 +1,17 @@
 # trademark-check-native
 
-# clone
+ a simple app that uses the markerapi to view trademarks
+
+## clone
   
   git clone https://github.com/nathanielalba/trademark-check-native.git
  
-# install
+## install
   
   npm install
 
-# run
+## run
   
   react-native run-ios
   
   
- a simple app that uses the markerapi to view trademarks
